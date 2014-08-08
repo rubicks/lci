@@ -1,3 +1,6 @@
+/* lci/tokenizer.c */
+
+#include "keywords.h"
 #include "tokenizer.h"
 
 /**

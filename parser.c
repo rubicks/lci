@@ -1,3 +1,6 @@
+/* lci/parser.c */
+
+#include "keywords.h"
 #include "parser.h"
 
 #ifdef DEBUG
@@ -1693,7 +1696,7 @@ parseTypeNodeAbort: /* Exception handling */
  */
 IdentifierNode *parseIdentifierNode(Token ***tokenp)
 {
-	IdentifierType type;
+	IdentifierType type = 0 ;
 	void *data = NULL;
 	IdentifierNode *slot = NULL;
 	const char *fname = NULL;

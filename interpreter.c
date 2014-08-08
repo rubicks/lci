@@ -763,7 +763,9 @@ ScopeObject *getScopeObject(ScopeObject *src,
 {
 	ValueObject *val = NULL;
 	char *name = NULL;
+#if 0 // unused
 	int status;
+#endif
 	int isI;
 	int isME;
 	ScopeObject *scope;

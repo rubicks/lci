@@ -108,6 +108,7 @@ typedef enum {
 	TT_ENDOFTOKENS  /**< Sentinel end of this enum -- don't move it! */
 } TokenType;
 
+#if 0 // unused
 static const char *keywords[] = {
 	"",            /* TT_INTEGER */
 	"",            /* TT_FLOAT */
@@ -183,6 +184,7 @@ static const char *keywords[] = {
 	"KTHX",        /* TT_KTHX */
 	""             /* TT_ENDOFTOKENS */
 };
+#endif
 
 /**
  * Stores token data with semantic meaning.
