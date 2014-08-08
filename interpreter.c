@@ -197,7 +197,7 @@ ValueObject *createBooleanValueObject(int data)
  *
  * \retval NULL Memory allocation failed.
  */
-ValueObject *createIntegerValueObject(long long data)
+ValueObject *createIntegerValueObject(long long int data)
 {
 	ValueObject *p = malloc(sizeof(ValueObject));
 	if (!p) {
@@ -1190,13 +1190,13 @@ ValueObject *castIntegerExplicit(ValueObject *node,
 		case VT_INTEGER:
 			return createIntegerValueObject(getInteger(node));
 		case VT_FLOAT:
-			return createIntegerValueObject((long long)getFloat(node));
+			return createIntegerValueObject((long long int)getFloat(node));
 		case VT_STRING:
 			if (strstr(getString(node), ":{")) {
 				/* Perform interpolation */
 				ValueObject *ret = NULL;
 				ValueObject *interp = castStringExplicit(node, scope);
-				long long value;
+				long long int value;
 				if (!interp) return NULL;
 				if (!isDecString(getString(interp))) {
 					error(IN_UNABLE_TO_CAST_VALUE);
@@ -1213,7 +1213,7 @@ ValueObject *castIntegerExplicit(ValueObject *node,
 				return ret;
 			}
 			else {
-				long long value;
+				long long int value;
 				if (!isDecString(getString(node))) {
 					error(IN_UNABLE_TO_CAST_VALUE);
 					return NULL;
@@ -1349,7 +1349,7 @@ ValueObject *castStringExplicit(ValueObject *node,
 			 * One character per integer bit plus one more for the
 			 * null character
 			 */
-			size_t size = sizeof(long long) * 8 + 1;
+			size_t size = sizeof(long long int) * 8 + 1;
 			data = malloc(sizeof(char) * size);
 			if (!data) return NULL;
 			sprintf(data, "%lli", getInteger(node));

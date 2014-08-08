@@ -332,9 +332,9 @@ typedef enum {
  * Stores constant data.
  */
 typedef union {
-	long long i; /**< Integer data. */
-	float f;     /**< Decimal data. */
-	char *s;     /**< String data. */
+	long long int i; /**< Integer data. */
+	float f;         /**< Decimal data. */
+	char *s;         /**< String data. */
 } ConstantData;
 
 /**
@@ -810,7 +810,7 @@ StmtNode *parseAltArrayDefStmtNode(Token ***);
  */
 /**@{*/
 ConstantNode *createBooleanConstantNode(int);
-ConstantNode *createIntegerConstantNode(long long);
+ConstantNode *createIntegerConstantNode(long long int);
 ConstantNode *createFloatConstantNode(float);
 ConstantNode *createStringConstantNode(char *);
 void deleteConstantNode(ConstantNode *);

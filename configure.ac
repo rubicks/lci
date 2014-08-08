@@ -36,7 +36,7 @@ AC_CHECK_HEADERS([float.h stdlib.h string.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_TYPE_SIZE_T
-AC_CHECK_TYPES(long long)
+AC_TYPE_LONG_LONG_INT
 
 # Checks for library functions.
 AC_FUNC_ERROR_AT_LINE

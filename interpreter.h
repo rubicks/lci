@@ -63,7 +63,7 @@ typedef enum {
  * Stores value data.
  */
 typedef union {
-	long long i;           /**< Integer data. */
+	long long int i;       /**< Integer data. */
 	float f;               /**< Decimal data. */
 	char *s;               /**< String data. */
 	FuncDefStmtNode *fn;   /**< Function data. */
@@ -140,7 +140,7 @@ int resolveTerminalSlot(ScopeObject *, ScopeObject *, IdentifierNode *, ScopeObj
 /**@{*/
 ValueObject *createNilValueObject(void);
 ValueObject *createBooleanValueObject(int);
-ValueObject *createIntegerValueObject(long long);
+ValueObject *createIntegerValueObject(long long int);
 ValueObject *createFloatValueObject(float);
 ValueObject *createStringValueObject(char *);
 ValueObject *createFunctionValueObject(FuncDefStmtNode *);
